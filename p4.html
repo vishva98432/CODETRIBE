@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-validation-FORM</title>
+    <style>
+        .box{
+            max-width: 500px;
+            margin: auto;
+            border: 2px solid black;
+            padding: 20px 20px 20px 20px;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+        h1{
+            text-decoration: underline;
+        }
+        .pad{
+            height: 30px;
+            width: 300px;
+        }
+        #blue{
+            background-color: skyblue;
+        }
+        button{
+            margin-top: 10px;
+            padding: 10px;
+            color: #fff;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <section class="box" id="box">
+        <h1>Contact Form</h1>
+  
+    <form action="" autocomplete="off" id="form" onsubmit="submitHandler(event)">
+
+        <label for="">FullName</label><br>
+        <input class="pad" type="text" name=name" id="name" minlength="1" maxlength="15"><br>
+        <strong id="statusName"></strong> <br>       
+
+        <label for="">Email id</label><br>
+        <input class="pad" type="text" name="email" id="email"><br>
+        <strong id="statusEmail"></strong><br>
+
+        <label for="">Mobile Number</label><br>
+        <input class="pad" type="text" name="mobile" id="mobile"><br>
+        <strong id="statusMobile"></strong><br>
+
+        <label for="">City</label><br>
+        <select class="pad" name="select" id="select">
+            <option value="0" disabled selected hidden>Choose city name</option>
+            <option value="1">Chennai</option>
+            <option value="2">Tiruvannamalai</option>
+            <option value="3">Salem</option>
+            <option value="4">Coimbatore</option>
+        </select><br>        
+        <strong id="statusCity"></strong><br>
+
+        <label for="">Gender</label><br>
+        <input type="radio" id="gender" name="male" value="male">Male 
+        <input type="radio" id="gender" name="female" value="female">Female<br>
+        <strong id="statusGender"></strong><br>
+        
+        <label for="">Language (optional)</label><br>
+        <input type="checkbox" name="language" id="language" value="tamil">Tamil 
+        <input type="checkbox" name="language"  id="language" value="english">English
+        <input type="checkbox" name="language"  id="language" value="kannada">Kannada 
+        <input type="checkbox" name="language"  id="language"  value="hindi">Hindi
+        <input type="checkbox" name="language" id="language" value="telugu">Telugu
+        <strong id="statusLanguage"></strong><br>
+
+        <button id="blue" type="submit">SUBMIT</button>
+        
+        <button type="reset" id="reset" onclick="window.location.reload()" >RESET</button>
+    </form>
+</section>
+
+    <script>
+        function submitHandler(e){
+        e.preventDefault();
+
+            //name
+            let user = document.getElementById("name").value;
+            
+            let status = document.getElementById("statusName");
+
+            if(user.length === 0){
+                status.innerHTML = "please enter Your name";
+                status.style.color = "red";
+            }else {
+            if(user.length <= 2){
+                status.innerHTML = "please enter valid name";
+                status.style.color = "orangered";
+            }else{
+                status.innerHTML = "valid user name";
+                status.style.color = "green";
+            }
+            }
+
+
+            //email
+            let email = document.getElementById("email").value;
+
+            let statuss = document.getElementById("statusEmail");
+
+            let regexs = /^\S+@\S+\.\S+$/ ; //example:admin@gmail.com
+
+            if(email.length === 0){
+                statuss.innerHTML = "please enter email";
+                statuss.style.color = "red";
+            }else {
+            if(regexs.test(email)=== false){
+                statuss.innerHTML = "invalid email";
+                statuss.style.color = "orangered";
+            }else{                   
+                statuss.innerHTML = "valid email";               
+                statuss.style.color = "green";
+            }
+            }
+
+            //mobile    
+            let mobile = document.getElementById("mobile").value;
+
+            let statusm = document.getElementById("statusMobile");
+
+            let regexm = /^[6-9]\d{9}$/;
+
+            if(mobile.length === 0){
+                statusm.innerHTML = "please enter mobile number";
+                statusm.style.color = "red";
+            }else {
+            if(regexm.test(mobile)=== false){
+                statusm.innerHTML = "Invalid mobile number";
+                statusm.style.color = "orangered";
+            }else{                   
+                statusm.innerHTML = "valid mobile number";                
+                statusm.style.color = "green";
+            }
+            }
+
+            //  city
+            let select = document.getElementById("select").value;
+
+            let statusc = document.getElementById("statusCity");
+
+            if(select == 0) {
+                statusc.innerHTML = "please select country";
+                statusc.style.color = "red";
+            } else if(select > 0) {                    
+                statusc.innerHTML = "selected country";               
+                statusc.style.color = "green";
+            }
+
+            //  gender
+
+            let gender = document.getElementById("gender");
+
+            let statusg = document.getElementById("statusGender");
+
+            if(!gender.checked) {
+                statusg.innerHTML = "please select gender";
+                statusg.style.color = "red";
+            } else  if(gender.checked){                    
+                statusg.innerHTML = "selected gender";               
+                statusg.style.color = "green";
+            }
+
+            //languages
+
+            let language = document.getElementById("language");
+
+            let statusl = document.getElementById("statusLanguage");
+
+            if (!language.checked) { 
+                statusl.innerHTML = "please select language";
+                statusl.style.color = "red";
+
+            }else if(language.checked.length !== 0) {
+                statusl.innerHTML = "selected language";               
+                statusl.style.color = "green";
+            }
+        }  
+    </script>
+</body>
+</html>
