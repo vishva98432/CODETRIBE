@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-assignment</title>
+</head>
+<body>
+    <center><h1>Operators</h1></center>
+    <div>
+        <h3> A = 10</h3>
+        <h3> B = 20</h3>
+
+        <h3>Arithmetic Operators</h3>
+
+        <p id="test">Addition:</p>
+        <p id="test1">substraction:</p>
+        <p id="test2">multiplication:</p>
+        <p id="test3">division:</p>
+        <p id="test4">Modulus:</p>
+        <p id="test5">increment:</p>
+        <p id="test6">decrement:</p>
+
+        <h3>comparison Operators</h3>
+
+        <p id="test7">Equal:</p>
+        <p id="test8">Not equal:</p>
+        <p id="test9">greater than:</p>
+        <p id="test10">Less than:</p>
+        <p id="test11">Greater than or Equal to:</p>
+        <p id="test12">Less than or Equal to:</p>
+        
+        <h3>Bitwise Operators</h3>
+
+        <p id="test13">AND:</p>
+        <p id="test14">OR:</p>
+        <p id="test15">XOR:</p>
+        <p id="test16">NOT:</p>
+        <p id="test17">Left Shift:</p>
+        <p id="test18">Right Shift:</p>
+        <p id="test19">Right Shift with Zero:</p>
+
+        <h3>Logical Operators</h3>
+
+        <p id="test20">AND:</p>
+        <p id="test21">OR:</p>
+        <p id="test22">XOR:</p>
+        
+        <h3>Assignment Operators</h3>
+        
+        <p id="test23">simple Assignment:</p>
+        <p id="test24">addition and Assignment:</p>
+        <p id="test25">substract and Assignment:</p>
+        <p id="test26">multiple and Assignment:</p>
+        <p id="test27">divide and Assignment:</p>
+        <p id="test28">madules and Assignment:</p>
+        
+        <h3>special or Ternary Operators</h3>
+        
+        <p id="test23">Conditional:</p>
+    </div>
+    <script>
+        let a = "10";
+        let b = "20";
+        document.getElementById("test").innerHTML += a + b;
+        
+        document.getElementById("test1").innerHTML += a - b;
+
+        document.getElementById("test2").innerHTML += a * b;
+
+        document.getElementById("test3").innerHTML += a / b;
+
+        document.getElementById("test4").innerHTML += a % b;
+
+        document.getElementById("test5").innerHTML += a ++ ;
+
+        document.getElementById("test6").innerHTML += a --  ;
+
+        document.getElementById("test7").innerHTML += a == b;
+
+        document.getElementById("test8").innerHTML += a != b;
+
+        document.getElementById("test9").innerHTML += a > b;
+
+        document.getElementById("test10").innerHTML += a < b;
+
+        document.getElementById("test11").innerHTML += a >= b;
+
+        document.getElementById("test12").innerHTML += a <= b;
+
+        document.getElementById("test13").innerHTML += a & b;
+
+        document.getElementById("test14").innerHTML += a | b;
+
+        document.getElementById("test15").innerHTML += a ^ b;
+
+        document.getElementById("test16").innerHTML += ~ b;
+
+        document.getElementById("test17").innerHTML += a << 1;
+
+        document.getElementById("test18").innerHTML += a >> 1;
+
+        document.getElementById("test19").innerHTML += a >>> 1;
+
+        document.getElementById("test20").innerHTML += a && b;
+
+        document.getElementById("test21").innerHTML += a || b;
+
+        document.getElementById("test22").innerHTML += !(a && b);
+
+        document.getElementById("test23").innerHTML += (a < b) ? 1 : 2 ;
+    </script>
+</body>
+</html>

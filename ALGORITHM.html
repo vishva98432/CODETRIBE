@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>algoritham Question</title>
+    <style>
+        input,select{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        Algorithm
+    </center>
+    <hr>
+    <p>1) largest of two number using js</p>
+   
+    <label for="a">Enter Input a?:</label>
+    <input type="number" id="a" name="a">
+    <br>
+
+    <label for="b">Enter Input b?:</label>
+    <input type="number" id="b" name="b">
+    <br>
+
+    <button type="button"  onclick="answer1()">Answer1</button>
+    <h1 id="large">Answer :</h1>
+    <hr>
+    <p>2) largest of three number using js</p>
+   
+    <label for="a2">Enter Input a?:</label>
+    <input type="number" id="a2" name="a2">
+    <br>
+
+    <label for="b2">Enter Input b?:</label>
+    <input type="number" id="b2" name="b2">
+    <br>
+    
+    <label for="c2">Enter Input c?:</label>
+    <input type="number" id="c2" name="c2">
+    <br>
+
+    <button type="button"  onclick="answer2()">Answer</button>
+    <h1 id="large2">Answer :</h1>
+    <hr>
+
+    <p>3) program to  find out whether a given year is leap year or not?</p>
+   
+    <label for="year">Enter Year:</label>
+    <input type="number" id="year" name="year">
+    <br>
+
+    <button type="button"  onclick="answer3()">Answer</button>
+    <h1 id="year3">Answer :</h1>
+    <hr>
+
+    <p>4) find the given number is palindrome or not.</p>
+   
+    <label for="palindrome">Enter Number:</label>
+    <input type="number" id="palindrome" name="palindrome">
+    <br>
+
+    <button type="button"  onclick="answer4()">Answer</button>
+    <h1 id="palindrome4">Answer :</h1>
+    <hr>
+
+    <p>5) programe to convert temperature from fahrenheit to celsious and celsius to fahrenheit.</p>
+   
+    <label for="cel">Celsius:</label>
+    <input type="number" id="cel" name="cel">
+    <br>
+
+    <label for="far">Fahrenheit:</label>
+    <input type="number" id="far" name="far">
+    <br>
+
+    <button type="button"  onclick="answer5()">Answer</button>
+    <h1 id="temperature">Temperature :</h1>
+    <h1 id="temperature5">Temperature :</h1>
+    <hr>
+
+    <p>6) program to check the sign of a given number</p>
+   
+    <label for="sign">Enter Number:</label>
+    <input type="number" id="sign" name="sign">
+    <br>
+
+    <button type="button"  onclick="answer6()">Answer</button>
+    <h1 id="sign6">Answer :</h1>
+    <hr>
+
+    <p>7) Check whether a given number is even or odd.</p>
+   
+    <label for="whether">Enter Number:</label>
+    <input type="number" id="whether" name="whether">
+    <br>
+
+    <button type="button"  onclick="answer7()">Answer</button>
+    <h1 id="whether7">Answer :</h1>
+    <hr>
+
+    <p>8) Check whether the triangle is equilateral, scalene, or isosceles?</p>
+   
+    <label for="ta">Enter Number:</label>
+    <input type="number" id="ta" name="ta">
+    <br>
+       
+    <label for="tb">Enter Number:</label>
+    <input type="number" id="tb" name="tb">
+    <br>
+       
+    <label for="tc">Enter Number:</label>
+    <input type="number" id="tc" name="tc">
+    <br>
+
+    <button type="button"  onclick="answer8()">Answer</button>
+    <h1 id="triangle8">Answer :</h1>
+    <hr>
+
+
+    <p>9) Program to check whether a character is an alphabet or not</p>
+   
+    <label for="cha">Enter Input Value:</label>
+    <input type="text" id="cha" name="cha">
+    <br>
+ 
+    <button type="button"  onclick="answer9()">Answer</button>
+    <h1 id="character9">Answer :</h1>
+    <hr>
+    
+    <p>10) Program to check vowel or consonants</p>
+   
+    <label for="vow">Enter Input Value:</label>
+    <input type="text" id="vow" name="vow">
+    <br>
+ 
+    <button type="button"  onclick="answer10()">Answer</button>
+    <h1 id="vow10">Answer :</h1>
+    <hr>
+
+    <p>11) Program to check Armstrong number</p>
+   
+    <label for="arms">Enter Input Value:</label>
+    <input type="text" id="arms" name="arms">
+    <br>
+ 
+    <button type="button"  onclick="answer11()">Answer</button>
+    <h1 id="arm11">Answer :</h1>
+    <hr>
+
+    <p>13) triangle is valid or not (sum of all angles = 180)</p>
+   
+    <label for="tra">Enter the Angle:</label>
+    <input type="number" id="tra" name="tra">
+    <br>
+       
+    <label for="trb">Enter the Angle:</label>
+    <input type="number" id="trb" name="trb">
+    <br>
+       
+    <label for="trc">Enter the Angle:</label>
+    <input type="number" id="trc" name="trc">
+    <br>
+
+    <button type="button"  onclick="answer13()">Answer</button>
+    <h1 id="triangle13">Answer :</h1>
+    <hr>
+
+    <p>14)Fibonacci series</p>
+   
+    <label for="fib">Enter Input Value:</label>
+    <input type="text" id="fib" name="fib">
+    <br>
+ 
+    <button type="button"  onclick="answer14()">Answer</button>
+    <h1 id="fib14">Answer :</h1>
+    <hr>
+
+    
+    <p>16) prime factorial of numbers.</p>
+   
+    <label for="prm">Enter Input Value:</label>
+    <input type="number" id="prm" name="prm">
+    <br>
+ 
+    <button type="button"  onclick="answer16()"> Answer </button>
+    <h1 id="prm16">Answer :</h1>
+    <hr>
+     
+    <p>17) to find prime number or not.</p>
+   
+    <label for="pr">Enter Number:</label>
+    <input type="number" id="pr" name="pr">
+    <br>
+ 
+    <button type="button"  onclick="answer17()">Answer</button>
+    <h1 id="pr17">Answer :</h1>
+    <hr>
+
+    <p>18) reverse the array.</p>
+   
+    <label for="ar1">Enter fruit:</label>
+    <input type="text" id="ar1" name="ar1">
+    <br>
+    <label for="ar2">Enter fruit:</label>
+    <input type="text" id="ar2" name="ar2">
+    <br>
+    <label for="ar3">Enter fruit:</label>
+    <input type="text" id="ar3" name="ar3">
+    <br>
+    <label for="ar4">Enter fruit:</label>
+    <input type="text" id="ar4" name="ar4">
+    <br>
+ 
+    <button type="button"  onclick="answer18()">Answer</button>
+    <h1 id="ar18">Answer :</h1>
+    <hr>
+
+    
+    <p>19) reverse the Number.</p>
+   
+    <label for="nr1">Enter Number:</label>
+    <input type="number" id="nr1" name="nr1">
+    <br>
+    <label for="nr2">Enter Number:</label>
+    <input type="number" id="nr2" name="nr2">
+    <br>
+    <label for="nr3">Enter Number:</label>
+    <input type="number" id="nr3" name="nr3">
+    <br>
+    <label for="nr4">Enter Number:</label>
+    <input type="number" id="nr4" name="nr4">
+    <br>
+ 
+    <button type="button"  onclick="answer19()">Answer</button>
+    <h1 id="nr19">Answer :</h1>
+    <hr>
+
+    <p>22) pattern - pyramids( half, inverted half, hollow half, full, hallow full, hollow inverted half)</p>
+    <h1 id="half1">Half Pyramid:</h1>
+    <p id="half"></p>
+
+    <h1>Inverted half Pyramid:</h1>
+    <p id="ihalf"></p><br>
+
+
+    <script>
+
+      /*1) largest of two number using js */
+
+       function answer1() {
+      var a = Number(document.getElementById("a").value);
+      var b = Number(document.getElementById("b").value);
+	if(a>b)
+	{
+       document.getElementById("large").innerHTML = "Answer :" +a;
+	}
+	else
+	{
+        document.getElementById("large").innerHTML = "Answer :" +b;
+	}
+   }
+
+   /*2) largest of three number using js */ 
+
+   function answer2() {
+      var a2 = Number(document.getElementById("a2").value);
+      var b2 = Number(document.getElementById("b2").value);
+      var c2 = Number(document.getElementById("c2").value);
+      if (a2 >= b2 && a2 >= c2) 
+      {      
+        document.getElementById("large2").innerHTML = "Answer :" +a2;
+      }
+     else if (b2 >= a2 && b2 >= c2)
+      {      
+        document.getElementById("large2").innerHTML = "Answer :" +b2;
+      } 
+    else 
+      {       
+        document.getElementById("large2").innerHTML = "Answer :" +c2;
+      }
+   }
+
+
+   /* 3) program to  find out whether a given year is leap year or not?*/ 
+
+    function answer3(){
+      var year = Number(document.getElementById("year").value);
+      
+      if(year % 4 == 0 )
+      {
+        document.getElementById("year3").innerHTML = "Answer : leaf year" ;
+      } else {
+        document.getElementById("year3").innerHTML = "Answer : Not a leaf year" ;
+      }
+    }
+
+/*4) find the given number is palindrome or not. */
+// function answer4(){
+//   const numStr = number.toString();
+  
+//   const reversedStr = numStr.split('').reverse().join('');
+  
+//   return numStr === reversedStr;
+// }
+
+// const number = document.getElementById("palindrome").value;
+// const isPalindromic = isPalindrome(number);
+
+// if (isPalindromic) {
+//     document.getElementById("palindrome4").innerHTML= a +"Is Palindrome Number";
+// } else {
+// 	document.getElementById("palindrome4").innerHTML= a +" Is Not Palindrome Number";
+// }
+
+
+/*5) programe to convert temperature from fahrenheit to celsious and celsius to fahrenheit.*/ 
+
+function answer5(){
+  var a = Number(document.getElementById("cel").value);
+  var b = Number(document.getElementById("far").value);
+
+  if( c = ((a * 9/5) + 32)){
+    document.getElementById("temperature").innerHTML = "Temperature of Fahrenheit:" + c ;
+  } if(d = (b - 32) * 5/9){
+    document.getElementById("temperature5").innerHTML = "Temperature of Celsius:" + d ;
+}}
+
+/*6) program to check the sign of a given number*/ 
+
+function answer6(){
+  var a = Number(document.getElementById("sign").value);
+
+  if(a > 0){
+    document.getElementById("sign6").innerHTML = "Answer: This Number is positive";
+  }else if(a < 0){
+    document.getElementById("sign6").innerHTML = "Answer: This Number is Negative";
+  }else {
+    document.getElementById("sign6").innerHTML = "Answer: This Number is Zero";
+  }
+}
+
+/* 7) Check whether a given number is even or odd*/
+function answer7(){
+  var a = Number(document.getElementById("whether").value);
+
+  if(a % 2 === 0){
+    document.getElementById("whether7").innerHTML = "Answer: This is Even Number";
+  }else {
+    document.getElementById("whether7").innerHTML = "Answer: This is Odd Number";
+  }
+}
+
+/* 8) Check whether the triangle is equilateral, scalene, or isosceles?*/ 
+
+function answer8(){
+  var a = Number(document.getElementById("ta").value);
+  var b = Number(document.getElementById("tb").value);
+  var c = Number(document.getElementById("tc").value);
+
+  if(a == b && b == c ){
+    document.getElementById("triangle8").innerHTML = "Answer: This Triangle is Equilateral";
+  }else if(a !== b && b !== c && a !== c){  
+    document.getElementById("triangle8").innerHTML = "Answer: This Triangle is Scalene";
+  }else {
+    document.getElementById("triangle8").innerHTML = "Answer: This Triangle is Isosceles";
+  }
+}
+
+/* 9) Program to check whether a character is an alphabet or not */ 
+
+function answer9(){
+
+  var c = String(document.getElementById("cha").value);
+
+  if( (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')){
+
+    document.getElementById("character9").innerHTML = "Answer : " + c + " is Alphabet.";
+
+  }else{
+    document.getElementById("character9").innerHTML = "Answer : " + c + " is not Alphabet.";
+  }
+}
+
+/*10) Program to check vowel or consonants */ 
+
+  function answer10(){
+
+    var str = String(document.getElementById("vow").value);
+
+  if (str === 'a' || str === 'e' || str === 'i' || str === 'o' || str === 'u') {
+
+    document.getElementById("vow10").innerHTML = "Answer :" + str + " is Vowel";
+
+  } else if(str < 0 || str > 0 || str == 0) {
+    document.getElementById("vow10").innerHTML = "Answer :" + str + " is number";
+  }else{
+    document.getElementById("vow10").innerHTML = "Answer :" + str + " is Constant";
+  }
+  }
+
+  /* 11) Program to check Armstrong number */ 
+
+  function answer11()
+    {
+    var arm=0,a,num;
+    num=Number(document.getElementById("arms").value);
+
+    temp=num;
+    while(temp>0)
+    {
+    a=temp%10;
+    temp=parseInt(temp/10); 
+    arm=arm+a*a*a;
+    }
+    if(arm==num)
+    {
+      
+      document.getElementById("arm11").innerHTML = "Answer :" + num + " is Armstrong number";
+    }
+    else
+    {
+      document.getElementById("arm11").innerHTML = "Answer :" + num + " is Not Armstrong number";
+    }
+    }
+/* 12) program to print number of days in a month.*/ 
+
+
+  /* 13) triangle is valid or not (sum of all angles = 180)*/ 
+  function answer13(){
+
+  var a = Number(document.getElementById("tra").value);
+  var b = Number(document.getElementById("trb").value);
+  var c = Number(document.getElementById("trc").value);
+
+  var total = a + b + c;
+
+  if (total === 180){
+    document.getElementById("triangle13").innerHTML = "Answer: This Triangle is Valid";
+  }else{  
+    document.getElementById("triangle13").innerHTML = "Answer: This Triangle is Not Valid";
+  }
+}
+/*14)Fibonacci series */
+
+function answer14(){
+    var a = 0;
+    var b = 1;
+    var c;
+ 
+    var n = document.getElementById("fib").value;
+ 
+    document.getElementById("fib14").innerHTML =  a+"<br/>";
+    
+    document.getElementById("fib14").innerHTML = b+"<br/>";
+ 
+    for(var i=3; i <= n;i++)
+    {
+        c = a + b;
+        a = b;
+        b = c;
+ 
+        document.getElementById("fib14").innerHTML = c+"<br/>";
+    }
+}
+
+/* 15) gcd or GCF using Euclidean algorithm.*/ 
+
+/* 16) prime factorial of numbers.*/ 
+function answer16() {
+var n = Number(document.getElementById("prm").value)
+  if (n === 0 || n === 1) {
+      document.getElementById("prm16").innerHTML = "Answer : 1";
+   
+  } else {
+      document.getElementById("prm16").innerHTML = "Answer : " +n * factorial(n - 1);
+  }
+}
+
+/*17) to find prime number or not. */
+
+function answer17() {
+
+  var n = Number(document.getElementById("pr").value);
+    if (n <= 1) {
+      document.getElementById("pr17").innerHTML = "Answer : Not a prime Number";
+    }
+    if (n <= 3) {
+        
+      document.getElementById("pr17").innerHTML = "Answer : prime Number";
+    }
+    if (n % 2 === 0 || n % 3 === 0) {
+        
+      document.getElementById("pr17").innerHTML = "Answer : Not a prime Number";
+    }
+    
+    for (let i = 5; i * i <= n; i += 6) {
+        if (n % i === 0 || n % (i + 2) === 0) {
+            
+      document.getElementById("pr17").innerHTML = "Answer : Not a prime Number";
+        }
+    }
+    
+    document.getElementById("pr17").innerHTML = "Answer : prime Number";
+}
+
+/* 18) reverse the array.*/ 
+function answer18(){
+  
+let fruit = new Array();
+  fruit[0]= String(document.getElementById("ar1").value);
+  fruit[1]= String(document.getElementById("ar2").value);
+  fruit[2]= String(document.getElementById("ar3").value);
+  fruit[3]= String(document.getElementById("ar4").value);
+
+  document.getElementById("ar18").innerHTML = fruit.reverse();
+}
+/* 19) reverse the array.*/ 
+function answer19(){
+  
+  let fruit = new Array();
+    fruit[0]= Number(document.getElementById("nr1").value);
+    fruit[1]= Number(document.getElementById("nr2").value);
+    fruit[2]= Number(document.getElementById("nr3").value);
+    fruit[3]= Number(document.getElementById("nr4").value);
+  
+    document.getElementById("nr19").innerHTML = fruit.reverse();
+  }
+
+
+  /*20) internet number in range x and y.*/ 
+
+  
+  /*21) exponent of a number using recursion. */ 
+
+
+/*22) pattern - pyramids( half, inverted half, hollow half, full, hallow full, hollow inverted half)*/ 
+let star = '*';
+  for (let i = 1; i <= 5; i++) {
+ 
+    for (let j = 1; j <= i; j++) {
+        document.write(`${star}`);
+    }
+    document.write("<br/>");
+}
+
+
+let star1 = '*';
+  for(let i = 5; i >= 1; i--) {
+ 
+    for (let j = 1; j <= i; j++) {
+        document.write(`${star1}`);
+    }
+    document.write("<br/>");
+}
+
+let star12 = '*';
+  for(let i = 1; i <= n; i++) {
+ 
+    for(let j = 1; j <= n; j++){
+      if (j <= i) {
+      row += '* ';
+    } else {
+      row += '  ';
+    }
+        document.write(`${star12}`);
+    }
+    document.write("<br/>");
+}
+
+let star3 = '*';
+  for (let i = 1; i <= 5; i++) {
+ 
+    for (let j = 1; j <= i; j++) {
+        document.write(`${star3}`);
+    }
+    document.write("<br/>");
+}
+
+
+// let c = 5;
+// for (let i = 1; i <= c; i++) {
+//   let row = ' '.repeat(c - i) + '*'.repeat(2 * i - 1);
+//   console.log(row);
+// }
+
+// let an = 5;
+// for (let i = 1; i <= an; i++) {
+//   let row = ' '.repeat(an - i);
+//   for (let j = 1; j <= 2 * i - 1; j++) {
+//     if (j === 1 || j === 2 * i - 1 || i === an) {
+//       row += '*';
+//     } else {
+//       row += ' ';
+//     }
+//   }
+//   console.log(row);
+// }
+
+
+    </script>
+</body>
+</html>

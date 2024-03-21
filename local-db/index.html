@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="container ba">      
+        <h3>CRUD LOCAL STORAGE</h3>   
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="insert.html">Create</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <div class="main-wrapper">
+        <div class="container">
+            
+            <div class="right-panel">
+                <div class="cardbox">
+                    <p><b>Local Storage</b></p>
+                    <span id="avialRecords"></span>
+                    <p id="autoFILL"></p>
+                    <div id="1sOutput">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <span id="avialRecords"></span>
+    <p id="autoFILL"></p>
+    <section id="user">
+    </section>
+
+    <script >
+    for (let  index = 0; index < localStorage.length; index++){
+        const key = localStorage.key(index);
+        
+
+var value = JSON.parse(localStorage.getItem(key));
+        // document.getElementById(
+        //     "1sOutput"
+        //     ).innerHTML += `<hr><br> key is :${key} <br> value is :${value.name} <br>img is :${value.email} <br> <br>`;
+    
+let img = document.createElement('img');
+           img.src = `${value.image}`
+           document.body.append(img);
+           
+
+           let h1 = document.createElement('p');
+            h1.innerHTML = `<b>USER ID :</b> ${key}`
+            document.body.append(h1);
+
+
+          let h2 = document.createElement('p');
+           h2.innerHTML = `<b>NAME    :</b> ${value.name}`
+           document.body.append(h2);
+            
+      let p1 = document.createElement('p');
+            p1.innerHTML = `<b>EMAIL    :</b>  ${value.email}`
+           document.body.append(p1);
+
+           let b = document.createElement('button');
+            b.innerHTML = `<button  type="button" class="cll" id='editBtn' ><a href="" >Edit</a></button>`;
+           document.body.append(b);
+
+           
+           let d = document.createElement('button');
+            d.innerHTML = `<button type="button" onclick="deletedata(${key})" id="${key}" class="cl">Delete</button>`;
+           document.body.append(d);
+
+        let article = document.createElement('article');
+            article.appendChild(img);
+            article.appendChild(h1);
+            article.appendChild(h2);
+            article.appendChild(p1);
+            article.appendChild(b);
+            article.appendChild(d);
+
+
+            let blk = document.querySelector("#user");
+
+            blk.appendChild(article);            
+            
+        }
+
+//     // Retrieving and parsing the object from localStorage
+// var value = JSON.parse(localStorage.getItem('user'));
+
+// // Logging the parsed object
+// console.log('Stored Object:', storedObject);
+
+
+
+    </script> 
+    <script src="assets/js/script.js"></script>
+    <script>
+
+        document.getElementById('editBtn').addEventListener('click', function() {
+        
+        (function(){
+        
+        document.body.contentEditable = 'true';
+        
+        document.designMode = 'on';
+        
+        })();
+        
+        });
+        
+        </script>
+</body>
+</html>
